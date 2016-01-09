@@ -15,6 +15,7 @@
 // Manage Routes by different language
 Route::group(['middleware' => 'language'], function () {
 	Route::get('/', 'WelcomeController@index');
+	Route::get('/blog', 'WelcomeController@blog');
 
     Route::get('home', 'HomeController@index');
     Route::get('test', 'HomeController@test');
