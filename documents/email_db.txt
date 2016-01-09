@@ -1,0 +1,44 @@
+Ciao Vincent ! Voilà les infos concernant inscription et critères de recherche pour étudiant et start-up.
+ 
+Quand j’écris certains mots au pluriel comme ça : “(s)”, ça veut dire que plusieurs réponses peuvent être sélectionnées/entrées dans les liste déroulantes/formulaires
+ 
+N’hésites pas à demander pour les trucs pas clairs.
+ 
+        I.            Ambassadeur (= étudiant)
+1.       Inscription profil
+a)         Info de base :
+-        Nom, Prénom
+-        Sexe (bordure profil card rose ou bleue (par exeple) selon sexe utilisateur)
+-        Âge (il faudrait que sur la “card” on voit l’âge de l’étudiant en chiffre : 21, 22 ans,...)
+-        Ville (actuelle), Pays (si possible en entrant le nom de la ville, le pays en est directement déduit)
+-        Disponibilité hebdomadaire : liste déroulante -> 25%, 50%, 75%, 100%
+-        École : formulaire (suggestions selon les entrées, comme sur linkedin)
+-        Discipline : formulaire (suggestions selon les entrées, comme sur linkedin)
+-        Degré : liste déroulante -> 1ère/2e/3e bachelor et 1ère/2e master
+b)        Info complémentaires :
+-        Diplôme(s) : formulaire
+-        Domaine(s) d’intérêt(s) : formulaire (suggestions selon les entrées, comme sur linkedin)
+-        Expérience(s) : formulaire partiel-> ………....(poste) chez …….…..(entreprise)
+-        Compétence(s) : formulaire
+-        Langue(s) parlée(s) : formulaire -> suggestions selon les entrées, comme sur linkedin
+c)         Photo de profil (pas obligatoire)
+d)        CV en PDF : texte libre -> CV obligatoire pour que son profil apparaisse dans les résultats de recherche
+2.       Recherche de société
+a)         Critères de recherche
+-        Ville déjà prise en compte (selon l’entrée dans rubrique I.1.a) info de base) avec possibilité de changer si jamais
+-        Langue(s) déjà prises en compte (selon l’entrée dans rubrique I.1.b) info de base) avec possibilité de changer si jamais
+-        Domaine(s) : type checkbox -> tous, Tous, Art, Droit, Économie, Environnement, Informatique, Marketing, Médias et communication, Réseaux sociaux, Restauration, Santé/bien-être, Social, Sport, Textiles, Tourisme, Transport, Vente/achat (cf.II.1.a))
+ 
+      II.            Start-Up
+1.       Inscription profil
+a)         Info de bases :
+-        Nom
+-        Ville (siège), Pays (si possible en entrant le nom de la ville, le pays en est directement déduit)
+-        Domaine(s) : type checkbox -> Tous, Art, Droit, Économie, Environnement, Informatique, Marketing, Médias et communication, Réseaux sociaux, Restauration, Santé/bien-être, Social, Sport, Textiles, Tourisme, Transport, Vente/achat (cf.I.2.a))
+-        Concept : formulaire (max 100 caractères (exemple))
+-        Langue(s) parlée(s) par le comité : formulaire -> suggestions selon les entrées, comme sur linkedin
+-        Attente(s) : formulaire (max * caractères )
+-        Disponibilité demandée : liste déroulante -> 25%, 50%, 75%, 100%
+-        Ville(s)/Pays d’intérêt ---> à réfléchir
+b)        Lien site (de la Start-up)
+c)         LOGO
