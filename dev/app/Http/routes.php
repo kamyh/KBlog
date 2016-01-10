@@ -16,10 +16,13 @@
 Route::group(['middleware' => 'language'], function () {
 	Route::get('/', 'WelcomeController@index');
 	Route::get('/blog', 'WelcomeController@blog');
+	Route::get('/post/{id}', 'WelcomeController@post')->where('id', '[0-9]+');
 
     Route::get('home', 'HomeController@index');
-    Route::get('category/{category}', 'WelcomeController@index')->where('category', '[A-Za-z]+');;
-    Route::get('test', 'HomeController@test');
+
+    Route::get('category/{category}', 'WelcomeController@indexCat')->where('category', '[A-Za-z]+');
+    Route::get('page/{page}', 'WelcomeController@indexPage')->where('page', '[0-9]+');
+    Route::get('category/{category}/page/{page}', 'WelcomeController@build')->where(array('page' => '[0-9]+', 'category' => '[A-Za-z]+'));
 
 	Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController',]);
 
@@ -41,9 +44,9 @@ Route::group(['middleware' => 'language'], function () {
         Route::post('/post/create', 'HomeController@createPost');
         Route::post('/post/save', 'HomeController@save');
 
-        Route::post('/post/publish/{id}', 'HomeController@publish')->where('id', '[0-9]+');;
-        Route::post('/post/edit/{id}', 'HomeController@edit')->where('id', '[0-9]+');;
-        Route::post('/post/delete/{id}', 'HomeController@delete')->where('id', '[0-9]+');;
+        Route::post('/post/publish/{id}', 'HomeController@publish')->where('id', '[0-9]+');
+        Route::post('/post/edit/{id}', 'HomeController@edit')->where('id', '[0-9]+');
+        Route::post('/post/delete/{id}', 'HomeController@delete')->where('id', '[0-9]+');
     });
 
 });

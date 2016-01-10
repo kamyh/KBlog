@@ -23,3 +23,10 @@ $(function () {
         }, 750);
     });
 });
+
+function languageChange() {
+    var e = document.getElementById("langSelector");
+    var lang = e.options[e.selectedIndex].value;
+
+    window.location = '/language/' + lang;
+}

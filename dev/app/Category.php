@@ -12,16 +12,8 @@ class Category extends Model {
 
     public static function getCategories()
     {
-        if(Lang::getLocale() == 'fr')
-        {
-            $lang = 0;
-        }
-        if(Lang::getLocale() == 'en')
-        {
-            $lang = 1;
-        }
 
-        $posts = Post::where('lang','=',$lang)->where('published','=',1)->lists('id');
+        $posts = Post::where('lang','=',Lang::getLocale())->where('published','=',1)->lists('id');
 
         $categories = Category::whereIn('post_id',$posts)->lists('name');
 

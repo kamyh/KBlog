@@ -76,8 +76,10 @@
 
                                     <div class="input-group">
                                         <select id="lang" name="lang">
-                                            <option value="0" @if($post->lang == 0) selected @endif>{{ trans('interface.french') }}</option>
-                                            <option value="1" @if($post->lang == 1) selected @endif>{{ trans('interface.english') }}</option>
+                                            @foreach(\App\Languages::$languages as $lang => $langStr)
+                                                <option value="{{$lang}}"
+                                                        @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 

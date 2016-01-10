@@ -45,4 +45,6 @@ return [
 	'french' => 'French',
 	'english' => 'English',
 	'category' => 'Category',
+	'newer' => 'Newer',
+	'older' => 'Older',
 ];

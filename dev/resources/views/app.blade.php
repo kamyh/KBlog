@@ -37,6 +37,14 @@
                         <li><a class="menu" href="#news">{{ trans('interface.news') }}</a></li>
                         <li><a class="menu" href="#category">{{ trans('interface.categories') }}</a></li>
                         <li><a class="menu" href="#contact">{{ trans('interface.contact') }}</a></li>
+                        <li>
+                            <select id="langSelector" onchange="languageChange();" class="menu">
+                                @foreach(\App\Languages::$languages as $lang => $langStr)
+                                    <option value="{{$lang}}"
+                                            @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>
+                                @endforeach
+                            </select>
+                        </li>
                         @if(Auth::check())
                             <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>@endif
                     </ul>
@@ -44,10 +52,7 @@
             </div>
         </nav>
     </header>
-    <section id="home" class="sec-main">
-        <h1 class="main-heading title">Coming Soon</h1>
-        <h1 class="main-heading">What we can do.</h1>
-    </section>
+
 
     @yield('content')
 
@@ -60,7 +65,7 @@
                 @foreach(\App\Category::getCategories() as $key => $value)
                     <div class="col-xs-6 col-md-3">
                         <p>
-                            <a class="btn btn-primary btn-lg" href="#" role="button">
+                            <a class="btn btn-primary btn-lg" href="{{url('category/' . $key)}}" role="button">
                                 {{$key}} <span class="badge">{{$value}}</span>
                             </a>
                         </p>
@@ -104,6 +109,9 @@
 
     <footer id="footer">
         <div class="container">
+            <div class="subject">
+                Blog Subject
+            </div>
             <ul class="soc-media-ul">
                 <li><a href="http://twitter.com/" class="fa fa-2x fa-twitter" target="_blank"></a></li>
                 <li><a href="http://linkedin.com/" class="fa fa-2x fa-linkedin"
