@@ -1,11 +1,28 @@
 <?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Lang;
 
-class Post extends Model {
+class Post extends Model
+{
 
     protected $table = 'posts';
 
-    protected $fillable = ['user_id', 'title', 'sub_title', 'preview', 'content'];
+    protected $fillable = ['user_id', 'title', 'sub_title', 'preview', 'content', 'published', 'lang', 'img_path'];
 
+    public static function get($category, $page)
+    {
+        $maxPerPage = 5;
+
+        if (Lang::getLocale() == 'fr') {
+            $lang = 0;
+        }
+        if (Lang::getLocale() == 'en') {
+            $lang = 1;
+        }
+
+        if ($category == null) {
+            return Post::where('lang', '=', $lang)->skip($maxPerPage * $page)->take($maxPerPage)->get();
+        }
+    }
 }

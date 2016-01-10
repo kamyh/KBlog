@@ -18,6 +18,7 @@ Route::group(['middleware' => 'language'], function () {
 	Route::get('/blog', 'WelcomeController@blog');
 
     Route::get('home', 'HomeController@index');
+    Route::get('category/{category}', 'WelcomeController@index')->where('category', '[A-Za-z]+');;
     Route::get('test', 'HomeController@test');
 
 	Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController',]);
@@ -37,6 +38,7 @@ Route::group(['middleware' => 'language'], function () {
     Route::group(['middleware' => 'App\Http\Middleware\Authenticate'], function()
     {
         Route::get('user', 'AdminController@index');
+        Route::post('/post/create', 'HomeController@createPost');
     });
 
 });

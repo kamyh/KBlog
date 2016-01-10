@@ -17,8 +17,10 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('published');
+            $table->integer('lang');
             $table->string('title',360);
             $table->string('sub_title',360);
+            $table->string('img_path',360);
             $table->string('preview',4000);
             $table->string('content',10000);
             $table->timestamps();

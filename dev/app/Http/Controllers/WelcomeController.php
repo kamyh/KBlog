@@ -1,5 +1,8 @@
 <?php namespace App\Http\Controllers;
 
+use App\Post;
+use Illuminate\Support\Facades\Input;
+
 class WelcomeController extends Controller {
 
 	/*
@@ -30,7 +33,16 @@ class WelcomeController extends Controller {
 	 */
 	public function index()
 	{
-		return view('welcome');
+		$category = null;
+
+		if(Input::has('category'))
+		{
+			$category = Input::get('category');
+		}
+
+		$posts = Post::get($category,0);
+
+		return view('welcome')->with(array('posts' => $posts));
 	}
 
 	public function blog()

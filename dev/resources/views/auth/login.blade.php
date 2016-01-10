@@ -40,7 +40,7 @@
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1"><span
                                                     class="glyphicon glyphicon-pencil" aria-hidden="true"></span></span>
-                                        <input type="text" class="form-control"
+                                        <input class="form-control"
                                                placeholder="{{ trans('interface.password') }}"
                                                aria-describedby="basic-addon1" type="password" name="password">
                                     </div>

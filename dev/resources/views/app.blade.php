@@ -5,6 +5,8 @@
     <meta name="robots" content="noindex">
     <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
 
+    <title>Blog</title>
+
     <link rel='stylesheet prefetch' href='//codepen.io/assets/reset/normalize.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
@@ -26,16 +28,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="{{url('/')}}" class="navbar-brand">Home</a>
+                    <a href="{{url('/')}}" class="navbar-brand">{{ trans('interface.home') }}</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right js-nav">
-                        <li><a class="menu" href="#footer">About</a></li>
-                        <li><a class="menu" href="#post">Posts</a></li>
-                        <li><a class="menu" href="#news">News</a></li>
-                        <li><a class="menu" href="#category">Category</a></li>
-                        <li><a class="menu" href="#contact">Contact</a></li>
-                        @if(Auth::check())<li><a href="{{url('/auth/logout')}}">Log Out</a></li>@endif
+                        <li><a class="menu" href="#footer">{{ trans('interface.about') }}</a></li>
+                        <li><a class="menu" href="#post">{{ trans('interface.posts') }}</a></li>
+                        <li><a class="menu" href="#news">{{ trans('interface.news') }}</a></li>
+                        <li><a class="menu" href="#category">{{ trans('interface.categories') }}</a></li>
+                        <li><a class="menu" href="#contact">{{ trans('interface.contact') }}</a></li>
+                        @if(Auth::check())
+                            <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>@endif
                     </ul>
                 </div>
             </div>
@@ -50,72 +53,19 @@
 
     <section id="category" class="sec-category">
         <div class="container">
-            <h1>Category</h1>
+            <h1>{{ trans('interface.categories') }}</h1>
             <hr/>
             <div class="row">
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
 
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
-
-                <div class="col-xs-6 col-md-3">
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="#" role="button">
-                            Learn more <span class="badge">42</span>
-                        </a>
-                    </p>
-                </div>
+                @foreach(\App\Category::getCategories() as $key => $value)
+                    <div class="col-xs-6 col-md-3">
+                        <p>
+                            <a class="btn btn-primary btn-lg" href="#" role="button">
+                                {{$key}} <span class="badge">{{$value}}</span>
+                            </a>
+                        </p>
+                    </div>
+                @endforeach
 
             </div>
         </div>
@@ -174,7 +124,7 @@
     <script>
         // Replace the <textarea id="editor1"> with a CKEditor
         // instance, using default configuration.
-        CKEDITOR.replace( 'editor-content' );
+        CKEDITOR.replace('editor-content');
     </script>
 
 </div>
