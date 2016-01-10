@@ -3,7 +3,7 @@ a, .sec-contact .btn {
 }
 
 .col-sm-offset-3 {
-     margin-left: 0%!important;
+    margin-left: 0% !important;
 }
 
 /*=Typography=*/
@@ -54,8 +54,21 @@ p {
     text-align: center;
 }
 
-.sec-divers p {
+.sec-category p {
     font-style: italic;
+}
+
+.sec-category {
+    text-align: center;
+}
+
+.sec-category a:hover {
+
+}
+
+.sec-category a {
+    border-radius: 0;
+    background: #34495e;
 }
 
 .sec-contact .btn {
@@ -99,7 +112,7 @@ hr {
     margin-bottom: 3em;
 }
 
-.sec-news img{
+.sec-news img {
     max-width: 100%;
 }
 
@@ -142,7 +155,7 @@ hr {
     color: #fff;
 }
 
-.title{
+.title {
     position: absolute;
     top: -80px;
     font-weight: 700;
@@ -158,12 +171,12 @@ hr {
 }
 
 .sec-post-2 img,
-.sec-post-1 img{
+.sec-post-1 img {
     max-width: 100%;
 }
 
 .sec-post-2 input[type=submit],
-.sec-post-1 input[type=submit]{
+.sec-post-1 input[type=submit] {
     background: #2c3e50;
     color: whitesmoke;
     border: 0;
@@ -173,13 +186,13 @@ hr {
 }
 
 .sec-post-2 input[type=submit]:hover,
-.sec-post-1 input[type=submit]:hover{
+.sec-post-1 input[type=submit]:hover {
     background: whitesmoke;
     color: #2c3e50;
     border: solid 1px #2c3e50;
 }
 
-.sec-post-2{
+.sec-post-2 {
     text-align: justify;
 }
 

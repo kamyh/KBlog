@@ -32,7 +32,7 @@
                         <li><a href="#footer">About</a></li>
                         <li><a href="#post">Posts</a></li>
                         <li><a href="#news">News</a></li>
-                        <li><a href="#divers">Divers</a></li>
+                        <li><a href="#category">Category</a></li>
                         <li><a href="#contact">Contact</a></li>
                         </li>
                     </ul>
@@ -47,26 +47,75 @@
 
     @yield('content')
 
-    <section id="divers" class="sec-divers">
+    <section id="category" class="sec-category">
         <div class="container">
-            <h1>Divers</h1>
+            <h1>Category</h1>
             <hr/>
             <div class="row">
-                <div class="col-sm-4">
-                    <p class="text-center">"Alex did great job when designing our website. It was pleasure to work
-                        with him and I'm sure we will hire him again."</p>
-                    <p class="text-right">&mdash; Marc Andressen</p>
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
                 </div>
-                <div class="col-sm-4">
-                    <p class="text-center">"Alex proved to be truly creative designer who is able to create just
-                        stunning design I immediately fell in love with!"</p>
-                    <p class="text-right">&mdash; Emily Cooper</p>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
                 </div>
-                <div class="col-sm-4">
-                    <p class="text-center">"I have worked with several different people and it always seemed like a
-                        pain—luckily I found Alex Devero. Thank you Alex!"</p>
-                    <p class="text-right">&mdash; Scott Grubber</p>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
                 </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="#" role="button">
+                            Learn more <span class="badge">42</span>
+                        </a>
+                    </p>
+                </div>
+
             </div>
         </div>
     </section>
