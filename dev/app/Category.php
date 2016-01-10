@@ -21,7 +21,7 @@ class Category extends Model {
             $lang = 1;
         }
 
-        $posts = Post::where('lang','=',$lang)->lists('id');
+        $posts = Post::where('lang','=',$lang)->where('published','=',1)->lists('id');
 
         $categories = Category::whereIn('post_id',$posts)->lists('name');
 

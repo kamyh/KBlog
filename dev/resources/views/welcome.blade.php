@@ -36,11 +36,12 @@
         <section id="post" class="@if($number%2 == 1)sec-post-2 @else sec-post-1 @endif">
             <div class="container">
                 <h1>{{$post->title}}</h1>
+                <h2>{{$post->sub_title}}</h2>
                 <hr/>
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
                         <img class="center-block"
-                             src="//c2.staticflickr.com/2/1688/23624251554_7a64ff2a09_h.jpg"
+                             src="{{asset('/uploads/' . $post->img_path)}}"
                              alt="Posli layout"/>
                     </div>
                     <div class="col-sm-6 col-sm-offset-3">

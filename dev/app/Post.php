@@ -22,7 +22,19 @@ class Post extends Model
         }
 
         if ($category == null) {
-            return Post::where('lang', '=', $lang)->skip($maxPerPage * $page)->take($maxPerPage)->get();
+            return Post::where('lang', '=', $lang)->where('published','=',1)->skip($maxPerPage * $page)->take($maxPerPage)->get();
         }
+    }
+
+    public static function getAll($page)
+    {
+        $maxPerPage = 25;
+
+        return Post::skip($maxPerPage * $page)->take($maxPerPage)->get();
+    }
+
+    public function getCategory()
+    {
+        return Category::where('post_id', '=', $this->id)->first();
     }
 }

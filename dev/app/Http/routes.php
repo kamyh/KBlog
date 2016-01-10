@@ -39,6 +39,11 @@ Route::group(['middleware' => 'language'], function () {
     {
         Route::get('user', 'AdminController@index');
         Route::post('/post/create', 'HomeController@createPost');
+        Route::post('/post/save', 'HomeController@save');
+
+        Route::post('/post/publish/{id}', 'HomeController@publish')->where('id', '[0-9]+');;
+        Route::post('/post/edit/{id}', 'HomeController@edit')->where('id', '[0-9]+');;
+        Route::post('/post/delete/{id}', 'HomeController@delete')->where('id', '[0-9]+');;
     });
 
 });

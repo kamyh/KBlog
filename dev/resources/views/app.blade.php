@@ -79,13 +79,13 @@
                     <form class="center-block" action="#" method="post">
                         <div class="form-group">
                             <label class="sr-only" for="inputName">Full name</label>
-                            <input id="inputName" class="form-control" type="text" placeholder="Adam Smith"
+                            <input id="inputName" class="form-control" type="text" placeholder="Paquito Guzman"
                                    required/>
                         </div>
                         <div class="form-group">
                             <label for="inputMail" class="sr-only">Email Address</label>
                             <input id="inputMail" class="form-control" type="email"
-                                   placeholder="adam.smith@mail.com" required/>
+                                   placeholder="paquito.guzman@mail.com" required/>
                         </div>
                         <div class="form-group">
                             <label for="inputMessage" class="sr-only">Your Message</label>
