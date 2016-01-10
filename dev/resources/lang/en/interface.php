@@ -19,4 +19,13 @@ return [
     'forgot_password' => 'Forgot Your password ?',
     'logout' => 'Logout',
 
+	'title' => 'Title',
+	'subTitle' => 'Title',
+	'preview' => 'Preview',
+	'content' => 'Content',
+	'create' => 'Create',
+	'published' => 'Published',
+	'unpublished' => 'Unpublished',
+	'edit' => 'Edit',
+	'delete' => 'Delete',
 ];

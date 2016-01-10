@@ -80,6 +80,10 @@ p {
     text-decoration: none;
 }
 
+.input-group{
+    margin-bottom: 5px;
+}
+
 /*=Base=*/
 section {
     padding: 5em 0;

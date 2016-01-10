@@ -10,6 +10,7 @@
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
     <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 
+    <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 </head>
 <body>
 
@@ -25,16 +26,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#" class="navbar-brand">Home</a>
+                    <a href="{{url('/')}}" class="navbar-brand">Home</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right js-nav">
-                        <li><a href="#footer">About</a></li>
-                        <li><a href="#post">Posts</a></li>
-                        <li><a href="#news">News</a></li>
-                        <li><a href="#category">Category</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        </li>
+                        <li><a class="menu" href="#footer">About</a></li>
+                        <li><a class="menu" href="#post">Posts</a></li>
+                        <li><a class="menu" href="#news">News</a></li>
+                        <li><a class="menu" href="#category">Category</a></li>
+                        <li><a class="menu" href="#contact">Contact</a></li>
+                        @if(Auth::check())<li><a href="{{url('/auth/logout')}}">Log Out</a></li>@endif
                     </ul>
                 </div>
             </div>
@@ -169,5 +170,11 @@
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
     <script language="JavaScript" src="{{ URL::asset('/') }}js/index.js"></script>
+
+    <script>
+        // Replace the <textarea id="editor1"> with a CKEditor
+        // instance, using default configuration.
+        CKEDITOR.replace( 'editor-content' );
+    </script>
 
 </div>
