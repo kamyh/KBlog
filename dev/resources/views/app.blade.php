@@ -50,7 +50,7 @@
                         <li><a class="menu" href="#category">{{ trans('interface.categories') }}</a></li>
                         <li><a class="menu" href="#contact">{{ trans('interface.contact') }}</a></li>
                         <li>
-                            <select id="langSelector" onchange="languageChange();" class="menu">
+                            <select id="langSelector" onchange="languageChange('{{url('language/')}}/');" class="menu">
                                 @foreach(Config::get('app.languages') as $lang => $langStr)
                                     <option value="{{$lang}}"
                                             @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>

@@ -24,11 +24,11 @@ $(function () {
     });
 });
 
-function languageChange() {
+function languageChange($url) {
     var e = document.getElementById("langSelector");
     var lang = e.options[e.selectedIndex].value;
 
-    window.location = '/language/' + lang;
+    window.location = $url + lang;
 }
 
 function comment($id)

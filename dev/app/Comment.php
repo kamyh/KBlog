@@ -17,12 +17,12 @@ class Comment extends Model
 
     public static function getComments($postId)
     {
-        return Comment::where('post_id', '=', $postId)->get();
+        return Comment::where('post_id', '=', $postId)->orderBy('created_at','DESC')->get();
     }
 
     public function getSubComments()
     {
-        $ids = SubComment::where('comment_id_from','=',$this->id)->lists('comment_id_sub');
+        $ids = SubComment::where('comment_id_from','=',$this->id)->orderBy('created_at','DESC')->lists('comment_id_sub');
 
         return Comment::whereIn('id',$ids)->get();
     }
