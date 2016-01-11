@@ -47,4 +47,7 @@ return [
 	'category' => 'Category',
 	'newer' => 'Newer',
 	'older' => 'Older',
+	'comment' => 'Comment',
+	'text' => 'Comment',
+	'website' => 'Website',
 ];

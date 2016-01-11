@@ -1,10 +1,13 @@
 <?php namespace App\Http\Controllers;
 
 use App\Category;
+use App\Comment;
 use App\Post;
+use App\SubComment;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Redirect;
 
 class WelcomeController extends Controller {
 
@@ -59,6 +62,40 @@ class WelcomeController extends Controller {
 	public function blog()
 	{
 		return view('blog');
+	}
+
+	public function comment(\Illuminate\Http\Request $request)
+	{
+		$validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
+			'name' => 'required',
+			'email' => 'required',
+			'text' => 'required',
+		]);
+
+		if ($validator->fails()) {
+			return redirect('home')
+				->withErrors($validator)
+				->withInput();
+		}
+
+		$comment = Comment::create([
+			'name' => Input::get('name'),
+			'email' => Input::get('email'),
+			'website' => Input::get('website'),
+			'text' => Input::get('text'),
+			'post_id' => Input::get('post_id'),
+		]);
+
+		if(Input::has('comment_id'))
+		{
+			SubComment::create([
+				'comment_id_from' => Input::get('comment_id'),
+				'comment_id_sub' => $comment->id,
+			]);
+		}
+
+		return Redirect::back();
+
 	}
 
 	public function post($id)

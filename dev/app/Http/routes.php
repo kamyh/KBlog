@@ -24,6 +24,8 @@ Route::group(['middleware' => 'language'], function () {
     Route::get('page/{page}', 'WelcomeController@indexPage')->where('page', '[0-9]+');
     Route::get('category/{category}/page/{page}', 'WelcomeController@build')->where(array('page' => '[0-9]+', 'category' => '[A-Za-z]+'));
 
+    Route::post('comment/create', 'WelcomeController@comment');
+
 	Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController',]);
 
 	// Manage Language changement

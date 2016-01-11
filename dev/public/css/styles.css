@@ -13,6 +13,28 @@ body {
     font-weight: 300;
 }
 
+.jumbotron p {
+    text-align: justify;
+    font-size: 14px !important;
+}
+
+.reply {
+    margin-bottom: 5px;
+}
+
+.sub {
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+}
+
+.comment-date {
+    font-size: 10px;
+}
+
+.comment-hide {
+    display: none;
+}
+
 .navbar a {
     text-align: center;
 }
@@ -143,9 +165,9 @@ hr {
     color: #940000;
 }
 
-.pager li>a, .pager li>span {
+.pager li > a, .pager li > span {
 
-    border-radius: 0!important;
+    border-radius: 0 !important;
 }
 
 /*Main*/
@@ -220,7 +242,7 @@ hr {
 
 /*Services*/
 .sec-post-1 {
-    background: antiquewhite;
+    background: #f6f6f6;
 }
 
 .sec-post-1 i {
