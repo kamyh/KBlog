@@ -14,11 +14,11 @@ If you want more you can translate th files in "/ressources/lang". Please let us
 ---------------------------------------------------
 ### Sections
 
-* [Library & framework](Library & framework)
-* [Setup](Setup)
-* [Configuration](Configuration)
-* [Features](Features)
-* [Todo](Todo)
+* [Library & framework](https://github.com/kamyh/KBlog/wiki/Library & framework)
+* [Setup](https://github.com/kamyh/KBlog/wiki/Setup)
+* [Configuration](https://github.com/kamyh/KBlog/wiki/Configuration)
+* [Features](https://github.com/kamyh/KBlog/wiki/Features)
+* [Todo](https://github.com/kamyh/KBlog/wiki/Todo)
 
 ---------------------------------------------------
 ### More Informations
