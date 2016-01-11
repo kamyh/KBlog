@@ -26,6 +26,10 @@ Route::group(['middleware' => 'language'], function () {
 
     Route::post('comment/create', 'WelcomeController@comment');
 
+    Route::post('contact', 'WelcomeController@contact');
+
+    Route::get('feed/{lang}', 'WelcomeController@feed')->where('lang', '[A-Za-z]+');
+
 	Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController',]);
 
 	// Manage Language changement

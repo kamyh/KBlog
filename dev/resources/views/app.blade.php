@@ -81,15 +81,19 @@
             <hr/>
             <div class="row">
                 <div class="col-sm-4 col-sm-offset-4">
-                    <form class="center-block" action="#" method="post">
+                    <form enctype="multipart/form-data"
+                          role="form"
+                          method="POST"
+                          accept-charset="utf-8"
+                          action="{{ url('/contact') }}">
                         <div class="form-group">
                             <label class="sr-only" for="inputName">Full name</label>
-                            <input id="inputName" class="form-control" type="text" placeholder="Paquito Guzman"
+                            <input name="name" id="inputName" class="form-control" type="text" placeholder="Paquito Guzman"
                                    required/>
                         </div>
                         <div class="form-group">
                             <label for="inputMail" class="sr-only">Email Address</label>
-                            <input id="inputMail" class="form-control" type="email"
+                            <input name="email" id="inputMail" class="form-control" type="email"
                                    placeholder="paquito.guzman@mail.com" required/>
                         </div>
                         <div class="form-group">
@@ -98,8 +102,8 @@
                                           required></textarea>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-default center-block" type="submit" value="Hire me">Contact
-                            </button>
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <button class="btn btn-default center-block" type="submit">Contact</button>
                         </div>
                     </form>
                 </div>
@@ -113,11 +117,12 @@
                 Blog Subject
             </div>
             <ul class="soc-media-ul">
-                <li><a href="http://twitter.com/" class="fa fa-2x fa-twitter" target="_blank"></a></li>
-                <li><a href="http://linkedin.com/" class="fa fa-2x fa-linkedin"
+                <li><a href="{{ Config::get('app.twitter')}}" class="fa fa-2x fa-twitter" target="_blank"></a></li>
+                <li><a href="{{ Config::get('app.linkedin')}}" class="fa fa-2x fa-linkedin"
                        target="_blank"></a></li>
-                <li><a href="https://github.com/kamyh" class="fa fa-2x fa-github" target="_blank"></a></li>
-                <li><a href="mailto:deruazvincent@gmail.com" class="fa fa-2x fa-envelope"></a></li>
+                <li><a href="{{ Config::get('app.github')}}" class="fa fa-2x fa-github" target="_blank"></a></li>
+                <li><a href="mailto:{{ Config::get('app.email')}}" class="fa fa-2x fa-envelope"></a></li>
+                <li><a href="{{url('feed/' . Lang::getLocale())}}" class="fa fa-2x fa-rss"></a></li>
             </ul>
         </div>
     </footer>
