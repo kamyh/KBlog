@@ -1,4 +1,4 @@
-<div id="c_{{$comment->id}}" class="panel panel-default comment-hide">
+<div id="{{$type . $comment->id}}" class="panel panel-default comment-hide">
     <div class="panel-heading">{{ trans('interface.comment') }}</div>
     <div class="panel-body">
 
