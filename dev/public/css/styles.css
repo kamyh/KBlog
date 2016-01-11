@@ -65,6 +65,10 @@ body {
     text-transform: uppercase;
 }
 
+.sec-news .col-md-4{
+    margin-bottom: 5px;
+}
+
 p {
     font-size: 16px;
     line-height: 1.5;
