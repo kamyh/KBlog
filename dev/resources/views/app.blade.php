@@ -51,7 +51,7 @@
                         <li><a class="menu" href="#contact">{{ trans('interface.contact') }}</a></li>
                         <li>
                             <select id="langSelector" onchange="languageChange();" class="menu">
-                                @foreach(\App\Languages::$languages as $lang => $langStr)
+                                @foreach(Config::get('app.languages') as $lang => $langStr)
                                     <option value="{{$lang}}"
                                             @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>
                                 @endforeach

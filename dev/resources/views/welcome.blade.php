@@ -15,7 +15,7 @@
                     <div class="col-md-4">
                         <div class="image-news">
                             <img src="{{asset('/uploads/' . $news->img_path)}}">
-                            <a href="#">
+                            <a href="{{url('post/' . $news->id)}}">
                                 <div class="overlay">
                                     <span>{{$news->title}}</span>
                                 </div>

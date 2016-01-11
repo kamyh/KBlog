@@ -76,7 +76,7 @@
 
                                     <div class="input-group">
                                         <select id="lang" name="lang">
-                                            @foreach(\App\Languages::$languages as $lang => $langStr)
+                                            @foreach(Config::get('app.languages') as $lang => $langStr)
                                                 <option value="{{$lang}}"
                                                         @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>
                                             @endforeach

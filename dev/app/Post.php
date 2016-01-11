@@ -41,7 +41,7 @@ class Post extends Model
     {
         $niceDate = new Carbon($this->created_at);
 
-        return $niceDate->format('l jS \\of F Y h:i:s A');;
+        return $niceDate->format('l jS F Y h:i:s');
     }
 
     public static function news()

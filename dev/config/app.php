@@ -2,7 +2,7 @@
 
 return [
 
-	'max_post_per_page' => 2,
+	'max_post_per_page' => 3,
 	'blog_title' => 'KBlog',
 	'blog_description' => 'KBlog is a mini CMS-Blog using Laravel 5',
 	'email' => 'deruazvincent@gmail.com',
@@ -10,6 +10,7 @@ return [
 	'linkedin' => 'http://linkedin.com/',
 	'twitter' => 'http://twitter.com/',
 	'github' => 'https://github.com/kamyh',
+	'languages' => ['fr' => 'Français', 'en' => 'English'],
 
 	/*
 	|--------------------------------------------------------------------------

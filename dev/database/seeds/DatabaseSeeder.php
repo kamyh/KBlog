@@ -106,6 +106,264 @@ class DatabaseSeeder extends Seeder
             'comment_id_from' => 1,
             'comment_id_sub' => 2,
         ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'piscatorios',
+            'sub_title' => 'magnitudine angusti gurgitis',
+            'preview' => 'Exsistit autem hoc loco quaedam quaestio subdifficilis, num quando amici novi, digni amicitia, veteribus sint anteponendi, ut equis vetulis teneros anteponere solemus. Indigna homine dubitatio! Non enim debent esse amicitiarum sicut aliarum rerum satietates; veterrima quaeque, ut ea vina, quae vetustatem ferunt, esse debet suavissima; verumque illud est, quod dicitur, multos modios salis simul edendos esse, ut amicitiae munus expletum sit.',
+            'content' => '<p>Alii summum decus in carruchis solito altioribus et ambitioso vestium cultu ponentes sudant sub ponderibus lacernarum, quas in collis insertas cingulis ipsis adnectunt nimia subtegminum tenuitate perflabiles, expandentes eas crebris agitationibus maximeque sinistra, ut longiores fimbriae tunicaeque perspicue luceant varietate liciorum effigiatae in species animalium multiformes.</p><p>Quam ob rem circumspecta cautela observatum est deinceps et cum edita montium petere coeperint grassatores, loci iniquitati milites cedunt. ubi autem in planitie potuerint reperiri, quod contingit adsidue, nec exsertare lacertos nec crispare permissi tela, quae vehunt bina vel terna, pecudum ritu inertium trucidantur.</p>',
+            'published' => 1,
+            'lang' => 'en',
+            'img_path' => '15946.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 3,
+            'name' => 'autem',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 3,
+            'name' => 'clausis',
+            'text' => 'clausis organa fabricantur hydraulica, et lyrae ad speciem carpentorum ingentes tibiaeque et histrionici gestus instrumenta non levia.',
+            'website' => 'fabricantur.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 3,
+            'name' => 'resultantes',
+            'text' => 'resultantes. denique pro philosopho cantor et in locum oratoris doctor artium ludicrarum accitur et bybliothecis sepulcrorum ritu in perpetuum',
+            'website' => 'denique.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 3,
+            'name' => 'numeremus',
+            'text' => 'numeremus, Paulos, Catones, Galos, Scipiones, Philos; his communis vita contenta est; eos autem omittamus, qui omnino nusquam reperiuntur.',
+            'website' => 'Catones.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 1,
+            'comment_id_sub' => 2,
+        ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'nunc',
+            'sub_title' => 'aliquem bene nummatum',
+            'preview' => 'At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.',
+            'content' => '<p>Paphius quin etiam et Cornelius senatores, ambo venenorum artibus pravis se polluisse confessi, eodem pronuntiante Maximino sunt interfecti. pari sorte etiam procurator monetae extinctus est. Sericum enim et Asbolium supra dictos, quoniam cum hortaretur passim nominare, quos vellent, adiecta religione firmarat, nullum igni vel ferro se puniri iussurum, plumbi validis ictibus interemit. et post hoe flammis Campensem aruspicem dedit, in negotio eius nullo sacramento constrictus.</p><p>Quam ob rem circumspecta cautela observatum est deinceps et cum edita montium petere coeperint grassatores, loci iniquitati milites cedunt. ubi autem in planitie potuerint reperiri, quod contingit adsidue, nec exsertare lacertos nec crispare permissi tela, quae vehunt bina vel terna, pecudum ritu inertium trucidantur.</p>',
+            'published' => 1,
+            'lang' => 'en',
+            'img_path' => '36596.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 4,
+            'name' => 'paeniteat',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 4,
+            'name' => 'observantem',
+            'text' => 'observantem, ut paeniteat ob haec bona tamquam praecipua non vidisse ante decennium Romam.',
+            'website' => 'fabricantur.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 4,
+            'name' => 'tamquam',
+            'text' => 'tamquam exoptatus suscipieris et interrogatus multa coactusque mentiri, miraberis numquam antea visus summatem virum tenuem te sic enixius',
+            'website' => 'suscipieris.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 4,
+            'name' => 'nunc',
+            'text' => 'At nunc si ad aliquem bene nummatum tumentemque ideo honestus advena salutatum introieris, primitus',
+            'website' => 'aliquem.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 1,
+            'comment_id_sub' => 2,
+        ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'tractibus',
+            'sub_title' => 'dicta finierat, multitudo omnis ad',
+            'preview' => 'Mox dicta finierat, multitudo omnis ad, quae imperator voluit, promptior laudato consilio consensit in pacem ea ratione maxime percita, quod norat expeditionibus crebris fortunam eius in malis tantum civilibus vigilasse, cum autem bella moverentur externa, accidisse plerumque luctuosa, icto post haec foedere gentium ritu perfectaque sollemnitate imperator Mediolanum ad hiberna discessit.',
+            'content' => '<p>In his tractibus navigerum nusquam visitur flumen sed in locis plurimis aquae suapte natura calentes emergunt ad usus aptae multiplicium medelarum. verum has quoque regiones pari sorte Pompeius Iudaeis domitis et Hierosolymis captis in provinciae speciem delata iuris dictione formavit.</p><p>Quam ob rem circumspecta cautela observatum est deinceps et cum edita montium petere coeperint grassatores, loci iniquitati milites cedunt. ubi autem in planitie potuerint reperiri, quod contingit adsidue, nec exsertare lacertos nec crispare permissi tela, quae vehunt bina vel terna, pecudum ritu inertium trucidantur.</p>',
+            'published' => 1,
+            'lang' => 'fr',
+            'img_path' => '55883.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 5,
+            'name' => 'omnis',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 5,
+            'name' => 'delatus',
+            'text' => 'delatus aut postulatus, capite vel multatione bonorum aut insulari solitudine damnabatur.',
+            'website' => 'postulatus.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 5,
+            'name' => 'partes',
+            'text' => 'fovisse partes hostiles, iniecto onere catenarum in modum beluae trahebatur et inimico urgente vel nullo, quasi sufficiente hoc solo, quod nominatus esset aut',
+            'website' => 'fovisse.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 5,
+            'name' => 'enim',
+            'text' => 'Siquis enim militarium vel honoratorum aut nobilis inter suos rumore tenus esset insimulatus',
+            'website' => 'Siquis.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 1,
+            'comment_id_sub' => 2,
+        ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'penetrali',
+            'sub_title' => 'interdum acciderat',
+            'preview' => 'Et interdum acciderat, ut siquid in penetrali secreto nullo citerioris vitae ministro praesente paterfamilias uxori susurrasset in aurem, velut Amphiarao referente aut Marcio, quondam vatibus inclitis, postridie disceret imperator. ideoque etiam parietes arcanorum soli conscii timebantur.',
+            'content' => '<p>Et quia Montius inter dilancinantium manus spiritum efflaturus Epigonum et Eusebium nec professionem nec dignitatem ostendens aliquotiens increpabat, qui sint hi magna quaerebatur industria, et nequid intepesceret, Epigonus e Lycia philosophus ducitur et Eusebius ab Emissa Pittacas cognomento, concitatus orator, cum quaestor non hos sed tribunos fabricarum insimulasset promittentes armorum si novas res agitari conperissent.</p><p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.</p>',
+            'published' => 1,
+            'lang' => 'fr',
+            'img_path' => '55885.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 6,
+            'name' => 'Montius',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 6,
+            'name' => 'Constantinopolim',
+            'text' => 'Constantinopolim petit exindeque per protectores retractus artissime tenebatur.',
+            'website' => 'exindeque.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 6,
+            'name' => 'Caesaris',
+            'text' => 'Caesaris curam, ad Mesopotamiam missus a socero per militares numeros immodice scrutabatur, an quaedam altiora meditantis iam Galli secreta susceperint scripta, qui conpertis Antiochiae gestis per minorem Armeniam lapsu',
+            'website' => 'Mesopotamiam.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 6,
+            'name' => 'vero',
+            'text' => 'Nunc vero inanes flatus quorundam vile esse quicquid extra urbis ',
+            'website' => 'flatus.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 1,
+            'comment_id_sub' => 2,
+        ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'quam',
+            'sub_title' => 'prima post Osdroenam quam',
+            'preview' => 'Et prima post Osdroenam quam, ut dictum est, ab hac descriptione discrevimus, Commagena, nunc Euphratensis, clementer adsurgit, Hierapoli, vetere Nino et Samosata civitatibus amplis inlustris.',
+            'content' => '<p>Iamque lituis cladium concrepantibus internarum non celate ut antea turbidum saeviebat ingenium a veri consideratione detortum et nullo inpositorum vel conpositorum fidem sollemniter inquirente nec discernente a societate noxiorum insontes velut exturbatum e iudiciis fas omne discessit, et causarum legitima silente defensione carnifex rapinarum sequester et obductio capitum et bonorum ubique multatio versabatur per orientales provincias, quas recensere puto nunc oportunum absque Mesopotamia digesta, cum bella Parthica dicerentur, et Aegypto, quam necessario aliud reieci ad tempus.</p><p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.</p>',
+            'published' => 1,
+            'lang' => 'fr',
+            'img_path' => '78467.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 7,
+            'name' => 'cladium',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 7,
+            'name' => 'dicerentur',
+            'text' => 'Parthica dicerentur, et Aegypto, quam necessario aliud reieci ad tempus.',
+            'website' => 'Aegypto.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 7,
+            'name' => 'recensere',
+            'text' => 'quas recensere puto nunc oportunum absque Mesopotamia digesta, cum bella',
+            'website' => 'puto.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 7,
+            'name' => 'silente',
+            'text' => 'causarum legitima silente defensione carnifex rapinarum sequester et obductio capitum et bonorum ubique multatio versabatur per orientales provincia',
+            'website' => 'rapinarum.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 1,
+            'comment_id_sub' => 2,
+        ]);
+
+        //**********************************************************//
+        DB::table('posts')->insert([
+            'user_id' => 1,
+            'title' => 'prima',
+            'sub_title' => 'prima post Osdroenam quam',
+            'preview' => 'Quanta autem vis amicitiae sit, ex hoc intellegi maxime potest, quod ex infinita societate generis humani, quam conciliavit ipsa natura, ita contracta res est et adducta in angustum ut omnis caritas aut inter duos aut inter paucos iungeretur.',
+            'content' => '<p>Quare hoc quidem praeceptum, cuiuscumque est, ad tollendam amicitiam valet; illud potius praecipiendum fuit, ut eam diligentiam adhiberemus in amicitiis comparandis, ut ne quando amare inciperemus eum, quem aliquando odisse possemus. Quin etiam si minus felices in diligendo fuissemus, ferendum id Scipio potius quam inimicitiarum tempus cogitandum putabat.</p><p>Latius iam disseminata licentia onerosus bonis omnibus Caesar nullum post haec adhibens modum orientis latera cuncta vexabat nec honoratis parcens nec urbium primatibus nec plebeiis.</p>',
+            'published' => 1,
+            'lang' => 'fr',
+            'img_path' => '86596.jpg',
+        ]);
+
+        DB::table('categories')->insert([
+            'post_id' => 8,
+            'name' => 'cladium',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 7,
+            'name' => 'angustum',
+            'text' => 'adducta in angustum ut omnis caritas aut inter duos aut inter paucos iungeretu',
+            'website' => 'omnis.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 8,
+            'name' => 'Quanta',
+            'text' => 'Quanta autem vis amicitiae sit, ex hoc intellegi maxime potest, quod ex infinita societate generis humani, quam conciliavit ipsa natura, ita contracta res est',
+            'website' => 'autem.com',
+        ]);
+
+        DB::table('comments')->insert([
+            'post_id' => 8,
+            'name' => 'Laelius',
+            'text' => 'Laelius, cuius tota disputatio est de amicitia, quam legens te ipse cognosces.',
+            'website' => 'cuius.com',
+        ]);
+
+        DB::table('sub_comments')->insert([
+            'comment_id_from' => 2,
+            'comment_id_sub' => 3,
+        ]);
     }
 
 }
