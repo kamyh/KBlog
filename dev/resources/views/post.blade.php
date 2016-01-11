@@ -10,6 +10,8 @@
     <section id="post" class="sec-post">
         <div class="container">
             <h4>{{$post->niceDate()}}</h4>
+            <a onclick="twitter('{{url('post/' . $post->id)}}','{{$post->title}}')"><i class="fa fa-twitter"></i></a>
+            <div class="fb-like" data-href="{{url('post/' . $post->id)}}" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
             {!! $post->content !!}
         </div>
     </section>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html class=''>
+<html>
 <head>
     <meta charset='UTF-8'>
     <meta name="robots" content="noindex">
+
+
     <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
 
-    <title>Blog</title>
+    <title>{{ Config::get('app.blog_title')}}</title>
 
     <link rel='stylesheet prefetch' href='//codepen.io/assets/reset/normalize.css'>
     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
@@ -15,6 +17,16 @@
     <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
 </head>
 <body>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=1530260103921247";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="wrapper">
     <header role="header">
@@ -88,7 +100,8 @@
                           action="{{ url('/contact') }}">
                         <div class="form-group">
                             <label class="sr-only" for="inputName">Full name</label>
-                            <input name="name" id="inputName" class="form-control" type="text" placeholder="Paquito Guzman"
+                            <input name="name" id="inputName" class="form-control" type="text"
+                                   placeholder="Paquito Guzman"
                                    required/>
                         </div>
                         <div class="form-group">
@@ -139,5 +152,7 @@
         // instance, using default configuration.
         CKEDITOR.replace('editor-content');
     </script>
+
+
 
 </div>
