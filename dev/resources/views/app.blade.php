@@ -120,7 +120,7 @@
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <button class="btn btn-default center-block" type="submit">Contact</button>
+                            <button class="btn btn-default center-block btn-clean" type="submit">Contact</button>
                         </div>
                     </form>
                 </div>
