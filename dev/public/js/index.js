@@ -31,17 +31,15 @@ function languageChange($url) {
     window.location = $url + lang;
 }
 
-function comment($id)
-{
-    if(document.getElementById($id).style.display == 'none' || document.getElementById($id).style.display == '') {
+function comment($id) {
+    if (document.getElementById($id).style.display == 'none' || document.getElementById($id).style.display == '') {
         document.getElementById($id).style.display = 'block';
-    }else{
+    } else {
         document.getElementById($id).style.display = 'none';
     }
 }
 
-function twitter($url,$tweet)
-{
+function twitter($url, $tweet) {
     var myWindow = window.open("https://twitter.com/intent/tweet?url=" + $url + "&text=" + $tweet, "_blank", "width=800, height=600");
 }
 
@@ -65,4 +63,17 @@ function copyToClipboard(element) {
     $temp.remove();
 
     alert('Image URL has been copy to your clipboard!');
+}
+
+function showPreview() {
+    if (document.getElementById('sec-preview').style.display == 'none' || document.getElementById('sec-preview').style.display == '') {
+        document.getElementById('sec-preview').style.display = 'block';
+    }
+
+    $content = CKEDITOR.instances['editor-content'].getData();
+    document.getElementById('prev_content').innerHTML = $content;
+}
+
+function hidePreview() {
+    document.getElementById('sec-preview').style.display = 'none';
 }

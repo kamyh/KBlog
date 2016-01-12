@@ -22,6 +22,7 @@ return [
 	'title' => 'Title',
 	'subTitle' => 'Sub-Title',
 	'preview' => 'Preview',
+	'previewContent' => 'Preview content',
 	'content' => 'Content',
 	'create' => 'Create',
 	'published' => 'Publish',

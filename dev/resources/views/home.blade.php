@@ -88,14 +88,16 @@
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
                                         <textarea class="form-control" rows="5" id="comment"
-                                                  placeholder="{{ trans('interface.preview') }}" name="preview">{{$post->preview}}</textarea>
+                                                  placeholder="{{ trans('interface.preview') }}"
+                                                  name="preview">{{$post->preview}}</textarea>
                                     </div>
 
                                     <div class="input-group">
                                         <span class="input-group-addon" id="basic-addon1">
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
-                                        <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
+                                        <textarea class="form-control" rows="5" id="editor-content"
+                                                  name="editor-content"
                                                   placeholder="{{ trans('interface.content') }}">{!! $post->content !!}</textarea>
                                     </div>
 
@@ -103,7 +105,7 @@
                                         <span class="input-group-addon" id="basic-addon1">
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
-                                        <input class="form-control" type="file" name="illustration" >
+                                        <input class="form-control" type="file" name="illustration">
 
                                     </div>
 
@@ -184,7 +186,8 @@
                                         <span class="input-group-addon" id="basic-addon1">
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
-                                        <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
+                                        <textarea class="form-control" rows="5" id="editor-content"
+                                                  name="editor-content"
                                                   placeholder="{{ trans('interface.content') }}">{{old('editor-content')}}</textarea>
                                     </div>
 
@@ -192,15 +195,17 @@
                                         <span class="input-group-addon" id="basic-addon1">
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
-                                        <input class="form-control" type="file" id="editor-content" name="illustration"
+                                        <input class="form-control" type="file" id="illustration" name="illustration"
                                                placeholder="{{ trans('interface.content') }}"
                                                value="{{old('content')}}">
                                     </div>
 
                                     <button type="submit"
                                             class="btn btn-default navbar-btn">{{ trans('interface.create') }}</button>
-
+                                    <button type="button" onclick="showPreview()"
+                                            class="btn btn-default navbar-btn">{{ trans('interface.preview') }}</button>
                                 </form>
+
                             </div>
                         </div>
                     </div>
@@ -208,6 +213,33 @@
             </div>
         </section>
     @endif
+
+    <section id="sec-preview" class="sec-preview">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{ trans('interface.previewContent') }}
+                            <button type="button" onclick="hidePreview()" class="btn btn-default navbar-btn">x</button>
+                        </div>
+                        <div class="panel-body">
+
+                            <section id="post" class="sec-post">
+                                <div class="container">
+                                    <div id="prev_content">
+
+                                    </div>
+                                </div>
+                            </section>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section id="posts">
         <div class="container">
@@ -227,7 +259,8 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/publish/' . $post->id) }}">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="hidden" name="_token"
+                                                       value="{{ csrf_token() }}">
                                                 <button type="submit"
                                                         class="btn btn-default navbar-btn">@if($post->published) {{ trans('interface.unpublished') }} @else {{ trans('interface.published') }} @endif</button>
                                             </form>
@@ -237,7 +270,8 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/edit/'.$post->id) }}">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="hidden" name="_token"
+                                                       value="{{ csrf_token() }}">
                                                 <button type="submit"
                                                         class="btn btn-default navbar-btn">{{ trans('interface.edit') }}</button>
                                             </form>
@@ -247,7 +281,8 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/delete/' . $post->id) }}">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <input type="hidden" name="_token"
+                                                       value="{{ csrf_token() }}">
                                                 <button type="submit"
                                                         class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
                                             </form>

@@ -13,6 +13,8 @@
             <a onclick="twitter('{{url('post/' . $post->id)}}','{{$post->title}}')"><i class="fa fa-twitter"></i></a>
             <div class="fb-like" data-href="{{url('post/' . $post->id)}}" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
             {!! $post->content !!}
+
+            <span class="tag">{{$post->getCategory()->name}}</span>
         </div>
     </section>
 

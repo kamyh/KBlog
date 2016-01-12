@@ -198,6 +198,13 @@ hr {
     background-size: cover;
 }
 
+.prev-post{
+    position: relative;
+    height: 560px;
+    max-width: 100%;
+    text-align: center;
+}
+
 .main-heading {
     position: absolute;
     top: 0;
@@ -301,6 +308,16 @@ footer span{
     float: right;
     color: white;
     margin-right: 10px;
+}
+
+.sec-preview{
+    display: none;
+}
+
+.tag{
+    float: right;
+    color: grey;
+    font-weight: 700;
 }
 
 .soc-media-ul {
