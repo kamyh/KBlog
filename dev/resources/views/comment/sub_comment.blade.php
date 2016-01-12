@@ -8,17 +8,17 @@
             </div>
             <p>{{$comment->text}}</p>
 
-            @include('comment.post_comment',['type' => 'a_'])
+            @include('comment.post_comment',['type' => 'a_', 'target' => $comment->id])
 
             @foreach($comment->getSubComments() as $sub)
                 <div class="jumbotron sub">
                     <h3>{{$sub->name}} <span class="comment-date">{{$sub->niceDate()}}</span></h3>
                     <div class="btn-group btn-group-xs reply" role="group">
-                        <button onclick="comment('b_{{$comment->id}}')" type="button" class="btn btn-default">reply</button>
+                        <button onclick="comment('b_{{$sub->id}}')" type="button" class="btn btn-default">reply</button>
                     </div>
                     <p>{{$sub->text}}</p>
 
-                    @include('comment.post_comment',['type' => 'b_'])
+                    @include('comment.post_comment',['type' => 'b_', 'target' => $sub->id])
 
                     @foreach($sub->getSubComments() as $sub)
                         <div class="jumbotron sub">

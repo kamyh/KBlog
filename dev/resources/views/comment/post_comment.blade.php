@@ -1,4 +1,4 @@
-<div id="{{$type . $comment->id}}" class="panel panel-default comment-hide">
+<div id="{{$type . $target}}" class="panel panel-default comment-hide">
     <div class="panel-heading">{{ trans('interface.comment') }}</div>
     <div class="panel-body">
 
@@ -9,7 +9,7 @@
               action="{{ url('/comment/create') }}">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="post_id" value="{{ $post->id }}">
-            <input type="hidden" name="comment_id" value="{{ $comment->id }}">
+            <input type="hidden" name="comment_id" value="{{ $target }}">
 
             <div class="input-group">
                                             <span class="input-group-addon" id="basic-addon1">
