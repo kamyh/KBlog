@@ -25,4 +25,4 @@ If you want more you can translate th files in "/ressources/lang". Please let us
 
 * If you make a different design, please let me know, so i can add it to the github.
 * Pay attention, some hosting don't use .env file.
-* * For now you have to manually set to '1' the db field 'isAdmin' to allow an user to post content.
+* For now you have to manually set to '1' the db field 'isAdmin' to allow an user to post content.
