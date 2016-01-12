@@ -198,6 +198,10 @@ hr {
     background-size: cover;
 }
 
+.prev-content{
+    max-width: 100%;
+}
+
 .prev-post{
     position: relative;
     height: 560px;

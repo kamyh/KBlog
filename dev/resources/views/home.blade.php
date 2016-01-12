@@ -105,12 +105,14 @@
                                         <span class="input-group-addon" id="basic-addon1">
                                             <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                                         </span>
-                                        <input class="form-control" type="file" name="illustration">
+                                        <input id="illustration" class="form-control" type="file" name="illustration">
 
                                     </div>
 
                                     <button type="submit"
                                             class="btn btn-default navbar-btn">{{ trans('interface.save') }}</button>
+                                    <button type="button" onclick="showPreview()"
+                                            class="btn btn-default navbar-btn">{{ trans('interface.preview') }}</button>
 
                                 </form>
                             </div>
@@ -225,14 +227,10 @@
                         <div class="panel-body">
 
                             <section id="post" class="sec-post">
-                                <div class="container">
-                                    <div id="prev_content">
+                                    <div id="prev_content" class="prev-content">
 
                                     </div>
-                                </div>
                             </section>
-
-
                         </div>
                     </div>
                 </div>
