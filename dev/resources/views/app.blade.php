@@ -20,10 +20,11 @@
 
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.5&appId=1530260103921247";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
@@ -58,7 +59,9 @@
                             </select>
                         </li>
                         @if(Auth::check())
-                            <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>@endif
+                            <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>
+                            <li><a href="{{url('/images')}}">{{ trans('interface.gallery') }}</a></li>
+                        @endif
                     </ul>
                 </div>
             </div>
@@ -152,7 +155,6 @@
         // instance, using default configuration.
         CKEDITOR.replace('editor-content');
     </script>
-
 
 
 </div>
