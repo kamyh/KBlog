@@ -5,7 +5,7 @@ return [
     'max_post_per_page' => 3,
     'blog_title' => 'KBlog',
     'blog_description' => 'KBlog is a mini CMS-Blog using Laravel 5',
-    'blog_slogant' => 'Blog you way.',
+    'blog_slogant' => 'Blog your way.',
     'email' => 'deruazvincent@gmail.com',
     'name' => 'Paquito Guzman',
     'linkedin' => 'http://linkedin.com/',
