@@ -14,6 +14,8 @@ return [
     'languages' => ['fr' => 'Français', 'en' => 'English'],
     'registering' => false,
 
+    'version' => '1.2',
+
     /*
     |--------------------------------------------------------------------------
     | Application Debug Mode

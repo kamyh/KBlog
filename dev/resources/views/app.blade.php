@@ -141,7 +141,9 @@
                 <li><a href="mailto:{{ Config::get('app.email')}}" class="fa fa-2x fa-envelope"></a></li>
                 <li><a href="{{url('feed/' . Lang::getLocale())}}" class="fa fa-2x fa-rss"></a></li>
             </ul>
+
         </div>
+        <a href="https://github.com/kamyh/KBlog"><span>KBlog - {{ Config::get('app.version')}}</span></a>
     </footer>
 
     <!-- Scripts -->

@@ -297,6 +297,12 @@ footer {
     background: #2c3e50;
 }
 
+footer span{
+    float: right;
+    color: white;
+    margin-right: 10px;
+}
+
 .soc-media-ul {
     display: flex;
     justify-content: center;
