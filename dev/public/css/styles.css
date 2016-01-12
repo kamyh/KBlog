@@ -104,6 +104,10 @@ p {
 
 }
 
+.sec-gallery .thumb img:hover{
+    cursor: pointer;
+}
+
 .sec-category a {
     border-radius: 0;
     background: #34495e;

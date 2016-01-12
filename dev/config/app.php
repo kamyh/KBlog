@@ -11,6 +11,7 @@ return [
 	'twitter' => 'http://twitter.com/',
 	'github' => 'https://github.com/kamyh',
 	'languages' => ['fr' => 'Français', 'en' => 'English'],
+	'registering' => false,
 
 	/*
 	|--------------------------------------------------------------------------

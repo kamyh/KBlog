@@ -67,24 +67,26 @@
             <div class="row">
                 <div class="panel panel-default">
                     <div class="panel-heading">{{ trans('interface.gallery') }}</div>
+                    <span>{{ trans('interface.clipboard') }}</span>
                     <div class="panel-body">
 
                         @foreach($images as $image)
                             <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                <a class="thumbnail" href="#">
+                                <a class="thumbnail"
+                                   onclick="copyToClipboard('{{asset('uploads/gallery/' . $image)}}')">
                                     <img class="img-responsive" src="{{asset('/uploads/gallery/' . $image)}}" alt="">
 
-                                <form enctype="multipart/form-data"
-                                      role="form"
-                                      method="POST"
-                                      accept-charset="utf-8"
-                                      action="{{ url('/images/delete') }}">
-                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <input type="hidden" name="path" value="{{ './uploads/gallery/' . $image }}">
+                                    <form enctype="multipart/form-data"
+                                          role="form"
+                                          method="POST"
+                                          accept-charset="utf-8"
+                                          action="{{ url('/images/delete') }}">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <input type="hidden" name="path" value="{{ './uploads/gallery/' . $image }}">
 
-                                    <button type="submit"
-                                            class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
-                                </form>
+                                        <button type="submit"
+                                                class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
+                                    </form>
                                 </a>
                             </div>
                         @endforeach

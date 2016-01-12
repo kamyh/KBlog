@@ -56,3 +56,13 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val(element).select();
+    document.execCommand("copy");
+    $temp.remove();
+
+    alert('Image URL has been copy to your clipboard!');
+}

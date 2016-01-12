@@ -16,7 +16,7 @@ class AdminMiddleware {
         if ($request->user() == null || !$request->user()->is_admin)
         {
             //TODO Add error message
-            return redirect('home');
+            return redirect('/');
         }
 
         return $next($request);

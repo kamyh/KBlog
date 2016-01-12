@@ -52,4 +52,6 @@ return [
 	'website' => 'Website',
 	'gallery' => 'Gallery',
 	'upload' => 'Upload',
+	'register_off' => 'Registering deactivated!',
+	'clipboard' => 'Click to copy an image URL!',
 ];
