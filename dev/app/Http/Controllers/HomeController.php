@@ -68,6 +68,7 @@ class HomeController extends Controller
 
             $post = Post::create([
                 'title' => Input::get('title'),
+                'lang' => Input::get('lang'),
                 'sub_title' => Input::get('subTitle'),
                 'preview' => Input::get('preview'),
                 'content' => Input::get('editor-content'),
@@ -107,6 +108,7 @@ class HomeController extends Controller
 
         $post->title = Input::get('title');
         $post->sub_title = Input::get('subTitle');
+        $post->lang = Input::get('lang');
         $post->preview = Input::get('preview');
         $post->content = Input::get('editor-content');
 
@@ -152,5 +154,34 @@ class HomeController extends Controller
         $post->delete();
 
         return Redirect::to('home');
+    }
+
+    public function images()
+    {
+        $dir    = './uploads/gallery';
+        $images = array_diff(scandir($dir), array('..', '.'));
+
+        return view('images')->with(array('images' => $images));
+    }
+
+    public function imagesUpload()
+    {
+        if (Input::file('illustration')->isValid()) {
+            $destinationPath = 'uploads/gallery';
+            $extension = Input::file('illustration')->getClientOriginalExtension();
+            $fileName = rand(11111, 99999) . '.' . $extension;
+            Input::file('illustration')->move($destinationPath, $fileName);
+        }
+
+        return Redirect::to('images');
+    }
+
+    public function imagesDelete()
+    {
+        $path = Input::get('path');
+
+        unlink($path);
+
+        return Redirect::to('images');
     }
 }

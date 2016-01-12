@@ -23,8 +23,8 @@ body {
 }
 
 .sub {
-    padding-bottom: 0!important;
-    padding-top: 0!important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
 }
 
 .comment-date {
@@ -39,7 +39,7 @@ body {
     text-align: center;
 }
 
-.sec-post a:hover{
+.sec-post a:hover {
     cursor: pointer;
 }
 
@@ -65,8 +65,16 @@ body {
     text-transform: uppercase;
 }
 
-.sec-news .col-md-4{
+.sec-news .col-md-4 {
     margin-bottom: 5px;
+}
+
+.thumbnail-prev{
+    max-width: 50%;
+}
+
+.sec-gallery img {
+    height: 120px !important;
 }
 
 p {

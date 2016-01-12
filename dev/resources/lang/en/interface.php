@@ -50,4 +50,6 @@ return [
 	'comment' => 'Comment',
 	'text' => 'Comment',
 	'website' => 'Website',
+	'gallery' => 'Gallery',
+	'upload' => 'Upload',
 ];

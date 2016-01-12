@@ -45,9 +45,9 @@
                                     <input type="hidden" name="id" value="{{ $post->id }}">
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                    </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.title') }}"
                                                aria-describedby="basic-addon1" name="title"
@@ -55,9 +55,9 @@
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                    </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.subTitle') }}"
                                                aria-describedby="basic-addon1" name="subTitle"
@@ -65,9 +65,9 @@
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.category') }}"
                                                aria-describedby="basic-addon1" name="category"
@@ -78,33 +78,33 @@
                                         <select id="lang" name="lang">
                                             @foreach(Config::get('app.languages') as $lang => $langStr)
                                                 <option value="{{$lang}}"
-                                                        @if(Lang::getLocale() == $lang) selected @endif>{{$langStr}}</option>
+                                                        @if($lang == $post->lang) selected @endif>{{$langStr}}</option>
                                             @endforeach
                                         </select>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
-                                <textarea class="form-control" rows="5" id="comment"
-                                          placeholder="{{ trans('interface.preview') }}" name="preview">{{$post->preview}}</textarea>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
+                                        <textarea class="form-control" rows="5" id="comment"
+                                                  placeholder="{{ trans('interface.preview') }}" name="preview">{{$post->preview}}</textarea>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
-                                <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
-                                          placeholder="{{ trans('interface.content') }}">{!! $post->content !!}</textarea>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
+                                        <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
+                                                  placeholder="{{ trans('interface.content') }}">{!! $post->content !!}</textarea>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
-                                        <input class="form-control" type="file" id="editor-content" name="illustration"
-                                               placeholder="{{ trans('interface.content') }}">
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
+                                        <input class="form-control" type="file" name="illustration" >
+
                                     </div>
 
                                     <button type="submit"
@@ -134,9 +134,9 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.title') }}"
                                                aria-describedby="basic-addon1" name="title"
@@ -144,9 +144,9 @@
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.subTitle') }}"
                                                aria-describedby="basic-addon1" name="subTitle"
@@ -154,9 +154,9 @@
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
                                         <input type="text" class="form-control"
                                                placeholder="{{ trans('interface.category') }}"
                                                aria-describedby="basic-addon1" name="category">
@@ -164,32 +164,34 @@
 
                                     <div class="input-group">
                                         <select id="lang" name="lang">
-                                            <option value="0">{{ trans('interface.french') }}</option>
-                                            <option value="1">{{ trans('interface.english') }}</option>
+                                            @foreach(Config::get('app.languages') as $lang => $langStr)
+                                                <option value="{{$lang}}"
+                                                        @if($lang == old('lang')) selected @endif>{{$langStr}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
-                                <textarea class="form-control" rows="5" id="comment"
-                                          placeholder="{{ trans('interface.preview') }}"
-                                          name="preview">{{old('preview')}}</textarea>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
+                                        <textarea class="form-control" rows="5" id="comment"
+                                                  placeholder="{{ trans('interface.preview') }}"
+                                                  name="preview">{{old('preview')}}</textarea>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
-                                <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
-                                          placeholder="{{ trans('interface.content') }}">{{old('editor-content')}}</textarea>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
+                                        <textarea class="form-control" rows="5" id="editor-content" name="editor-content"
+                                                  placeholder="{{ trans('interface.content') }}">{{old('editor-content')}}</textarea>
                                     </div>
 
                                     <div class="input-group">
-                                <span class="input-group-addon" id="basic-addon1">
-                                    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-                                </span>
+                                        <span class="input-group-addon" id="basic-addon1">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                        </span>
                                         <input class="form-control" type="file" id="editor-content" name="illustration"
                                                placeholder="{{ trans('interface.content') }}"
                                                value="{{old('content')}}">

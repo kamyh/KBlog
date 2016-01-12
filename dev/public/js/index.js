@@ -40,8 +40,19 @@ function comment($id)
     }
 }
 
-//https://twitter.com/intent/tweet?url=http%3A%2F%2Fdisq.us%2F9068kq&text=%22There%27s%20another%20way%20to%20gain%20some%20time%20if%20you%20don%27t%20have%20enough%20for%20writing.%20It%20takes%20a%20bit%20of%E2%80%A6%22%20%E2%80%94%20Jamie%20Whitehorn
 function twitter($url,$tweet)
 {
     var myWindow = window.open("https://twitter.com/intent/tweet?url=" + $url + "&text=" + $tweet, "_blank", "width=800, height=600");
+}
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#prev').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
 }

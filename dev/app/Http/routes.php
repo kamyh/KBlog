@@ -53,6 +53,10 @@ Route::group(['middleware' => 'language'], function () {
         Route::post('/post/publish/{id}', 'HomeController@publish')->where('id', '[0-9]+');
         Route::post('/post/edit/{id}', 'HomeController@edit')->where('id', '[0-9]+');
         Route::post('/post/delete/{id}', 'HomeController@delete')->where('id', '[0-9]+');
+
+        Route::get('/images', 'HomeController@images');
+        Route::post('/images', 'HomeController@imagesUpload');
+        Route::post('/images/delete', 'HomeController@imagesDelete');
     });
 
 });
