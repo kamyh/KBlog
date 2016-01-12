@@ -103,24 +103,24 @@
                           accept-charset="utf-8"
                           action="{{ url('/contact') }}">
                         <div class="form-group">
-                            <label class="sr-only" for="inputName">Full name</label>
+                            <label class="sr-only" for="inputName">{{ trans('interface.name') }}</label>
                             <input name="name" id="inputName" class="form-control" type="text"
                                    placeholder="Paquito Guzman"
                                    required/>
                         </div>
                         <div class="form-group">
-                            <label for="inputMail" class="sr-only">Email Address</label>
+                            <label for="inputMail" class="sr-only">{{ trans('interface.email') }}</label>
                             <input name="email" id="inputMail" class="form-control" type="email"
                                    placeholder="paquito.guzman@mail.com" required/>
                         </div>
                         <div class="form-group">
-                            <label for="inputMessage" class="sr-only">Your Message</label>
+                            <label for="inputMessage" class="sr-only">{{ trans('interface.yourMessage') }}</label>
                                 <textarea id="inputMessage" class="form-control" name="message" cols="30" rows="8"
                                           required></textarea>
                         </div>
                         <div class="form-group">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <button class="btn btn-default center-block btn-clean" type="submit">Contact</button>
+                            <button class="btn btn-default center-block btn-clean" type="submit">{{ trans('interface.contact') }}</button>
                         </div>
                     </form>
                 </div>
@@ -144,6 +144,7 @@
 
         </div>
         <a href="https://github.com/kamyh/KBlog"><span>KBlog - {{ Config::get('app.version')}}</span></a>
+        <a href="{{url('auth/login')}}"><span>{{ trans('interface.login') }}</span></a>
     </footer>
 
     <!-- Scripts -->
@@ -158,6 +159,4 @@
         // instance, using default configuration.
         CKEDITOR.replace('editor-content');
     </script>
-
-
 </div>

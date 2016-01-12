@@ -53,6 +53,7 @@ return [
 	'gallery' => 'Gallery',
 	'upload' => 'Upload',
 	'admin' => 'Admin',
+	'yourMessage' => 'Your Message',
 	'register_off' => 'Registering deactivated!',
 	'clipboard' => 'Click to copy an image URL!',
 ];
