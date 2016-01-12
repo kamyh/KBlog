@@ -60,6 +60,7 @@
                         </li>
                         @if(Auth::check())
                             <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>
+                            <li><a href="{{url('/home')}}">{{ trans('interface.admin') }}</a></li>
                             <li><a href="{{url('/images')}}">{{ trans('interface.gallery') }}</a></li>
                         @endif
                     </ul>

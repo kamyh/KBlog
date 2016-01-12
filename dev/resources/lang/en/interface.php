@@ -52,6 +52,7 @@ return [
 	'website' => 'Website',
 	'gallery' => 'Gallery',
 	'upload' => 'Upload',
+	'admin' => 'Admin',
 	'register_off' => 'Registering deactivated!',
 	'clipboard' => 'Click to copy an image URL!',
 ];
