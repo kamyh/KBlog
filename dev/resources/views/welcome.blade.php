@@ -2,8 +2,8 @@
 
 @section('content')
     <section id="home" class="sec-main">
-        <h1 class="main-heading title">Coming Soon</h1>
-        <h1 class="main-heading">What we can do.</h1>
+        <h1 class="main-heading title">{{ Config::get('app.blog_title')}}</h1>
+        <h1 class="main-heading">{{ Config::get('app.blog_slogant')}}</h1>
     </section>
 
     <section id="news" class="sec-news">
