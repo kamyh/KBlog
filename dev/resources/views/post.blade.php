@@ -14,7 +14,7 @@
             <div class="fb-like" data-href="{{url('post/' . $post->id)}}" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
             {!! $post->content !!}
 
-            <span class="tag">{{$post->getCategory()->name}}</span>
+            <a href="{{url('category/' . $post->getCategory()->name)}}" role="button"><span class="tag"><i class="fa fa-tag"></i> {{$post->getCategory()->name}}</span></a>
         </div>
     </section>
 

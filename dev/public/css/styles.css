@@ -198,11 +198,11 @@ hr {
     background-size: cover;
 }
 
-.prev-content{
+.prev-content {
     max-width: 100%;
 }
 
-.prev-post{
+.prev-post {
     position: relative;
     height: 560px;
     max-width: 100%;
@@ -248,6 +248,13 @@ hr {
 .sec-post-1 img {
     max-width: 100%;
     image-orientation: from-image;
+    transition: all .3s ease-in-out;
+}
+
+.sec-post-2 img:hover,
+.sec-post-1 img:hover{
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .sec-post-2 input[type=submit],
@@ -308,20 +315,25 @@ footer {
     background: #2c3e50;
 }
 
-footer span{
+footer span {
     float: right;
     color: white;
     margin-right: 10px;
 }
 
-.sec-preview{
+.sec-preview {
     display: none;
 }
 
-.tag{
+.tag {
     float: right;
     color: grey;
     font-weight: 700;
+
+}
+
+.tag .fa{
+    display: inline;
 }
 
 .soc-media-ul {
