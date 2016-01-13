@@ -145,7 +145,13 @@ footer {
     display: inline;
 }
 
-ul {
+/*ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}*/
+
+footer ul{
     padding: 0;
     margin: 0;
     list-style-type: none;
