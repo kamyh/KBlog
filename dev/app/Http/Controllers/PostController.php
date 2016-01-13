@@ -2,6 +2,7 @@
 
 use App\Category;
 use App\Post;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
@@ -135,6 +136,7 @@ class PostController extends Controller
         $post = Post::where('id', '=', $id)->first();
 
         $post->published = !$post->published;
+        $post->published_at = Carbon::now();
         $post->save();
 
         return Redirect::to('home');

@@ -43,6 +43,7 @@
                         <p>{!!$post->preview!!}</p>
                     </div>
                     <input type="submit" value="Read More" onclick="window.location='{{url('/post/' . $post->id) }}'">
+                    <span>{{$post->published_at}}</span>
                 </div>
             </div>
         </section>

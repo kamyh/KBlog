@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->integer('published');
+            $table->dateTime('published_at');
             $table->string('lang',11);
             $table->string('title',360);
             $table->string('sub_title',360);

@@ -10,7 +10,7 @@ class Post extends Model
 
     protected $table = 'posts';
 
-    protected $fillable = ['user_id', 'title', 'sub_title', 'preview', 'content', 'published', 'lang', 'img_path'];
+    protected $fillable = ['user_id', 'title', 'sub_title', 'preview', 'content', 'published', 'lang', 'img_path', 'published_at'];
 
     public static function get($category, $page)
     {
@@ -39,9 +39,9 @@ class Post extends Model
 
     public function niceDate()
     {
-        $niceDate = new Carbon($this->created_at);
+        $niceDate = new Carbon($this->published_at);
 
-        return $niceDate->format('l jS F Y h:i:s');
+        return $niceDate->format('l jS F Y H:i:s');
     }
 
     public static function news()
