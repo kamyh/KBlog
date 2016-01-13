@@ -20,7 +20,7 @@
 
     <section id="news" class="sec-news">
         <div class="container">
-            <h1>Comments</h1>
+            <h1>{{ trans('interface.comments') }}</h1>
             <hr/>
             <div class="row">
                 <div class="panel panel-default">

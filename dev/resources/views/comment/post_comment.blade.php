@@ -12,16 +12,16 @@
             <input type="hidden" name="comment_id" value="{{ $target }}">
 
             <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1">
-                                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                                            </span>
+                <span class="input-group-addon" id="basic-addon1">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                </span>
                 <input type="text" class="form-control"
                        placeholder="{{ trans('interface.name') }}"
                        aria-describedby="basic-addon1" name="name"
                        value="{{old('name')}}">
-                                            <span class="input-group-addon" id="basic-addon1">
-                                                <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                                            </span>
+                <span class="input-group-addon" id="basic-addon1">
+                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                </span>
                 <input type="text" class="form-control"
                        placeholder="{{ trans('interface.email') }}"
                        aria-describedby="basic-addon1" name="email"
@@ -29,9 +29,9 @@
             </div>
 
             <div class="input-group">
-                                            <span class="input-group-addon" id="basic-addon1">
-                                                <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-                                            </span>
+                <span class="input-group-addon" id="basic-addon1">
+                    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+                </span>
                 <input type="text" class="form-control"
                        placeholder="{{ trans('interface.website') }}"
                        aria-describedby="basic-addon1" name="website"

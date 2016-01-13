@@ -49,6 +49,7 @@ return [
 	'newer' => 'Newer',
 	'older' => 'Older',
 	'comment' => 'Comment',
+	'comments' => 'Comments',
 	'text' => 'Comment',
 	'website' => 'Website',
 	'gallery' => 'Gallery',
@@ -57,4 +58,8 @@ return [
 	'yourMessage' => 'Your Message',
 	'register_off' => 'Registering deactivated!',
 	'clipboard' => 'Click to copy an image URL!',
+	'issue' => 'There were some problems with your input.',
+	'reset' => 'Click here to reset your password',
+	'reply' => 'reply',
+	'send_reset' => 'Send Password Reset Link',
 ];
