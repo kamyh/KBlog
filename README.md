@@ -6,7 +6,7 @@ KBlog is a Blog CMS using laravel framework.
 
 For now we provide the following langages:
 
-* French (to be finish)
+* French (to be finished)
 * English
 
 If you want more you can translate th files in "/ressources/lang". Please let us know that we can add your translations.
