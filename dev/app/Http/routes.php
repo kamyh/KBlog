@@ -52,6 +52,8 @@ Route::group(['middleware' => 'language'], function () {
         Route::get('/images', 'PostController@images');
         Route::post('/images', 'PostController@imagesUpload');
         Route::post('/images/delete', 'PostController@imagesDelete');
+
+        Route::get('/statistics', 'PostController@getStatistics');
     });
 
     Route::group(['middleware' => 'App\Http\Middleware\Authenticate'], function()

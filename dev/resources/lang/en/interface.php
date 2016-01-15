@@ -62,4 +62,9 @@ return [
 	'reset' => 'Click here to reset your password',
 	'reply' => 'reply',
 	'send_reset' => 'Send Password Reset Link',
+	'statistics' => 'Statistics',
+	'page' => 'Page',
+	'addr' => 'Adresse',
+	'visit' => 'Visits',
+	'visit_unique' => 'Visits unique',
 ];

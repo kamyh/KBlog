@@ -77,3 +77,4 @@ function showPreview() {
 function hidePreview() {
     document.getElementById('sec-preview').style.display = 'none';
 }
+

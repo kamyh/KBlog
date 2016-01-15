@@ -4,6 +4,7 @@ use App\Category;
 use App\Comment;
 use App\Post;
 use App\Feed;
+use App\Statistics;
 use App\SubComment;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
@@ -25,6 +26,8 @@ class WelcomeController extends Controller
     |
     */
 
+    protected $statistics;
+
     /**
      * Create a new controller instance.
      *
@@ -33,6 +36,7 @@ class WelcomeController extends Controller
     public function __construct()
     {
         //$this->middleware('guest');
+        $this->statistics = new Statistics();
     }
 
     /**
@@ -104,6 +108,8 @@ class WelcomeController extends Controller
     {
         $post = Post::where('id', '=', $id)->first();
 
+        $this->statistics->incrementPage('post_' . $post->title);
+
         return view('post')->with(array('post' => $post));
     }
 
@@ -115,7 +121,6 @@ class WelcomeController extends Controller
     public function build($category, $page)
     {
         $morePage = 0;
-
         $posts = Post::get($category, $page);
 
         if ($category == null) {
@@ -130,6 +135,8 @@ class WelcomeController extends Controller
             }
         }
 
+        $this->statistics->incrementPage('welcome');
+
         return view('welcome')->with(array('posts' => $posts, 'page' => $page, 'category' => $category, 'morePage' => $morePage));
     }
 
@@ -137,7 +144,7 @@ class WelcomeController extends Controller
     {
         $feed = new Feed();
 
-        $posts = Post::where('lang','=',$lang)->orderBy('created_at', 'desc')->take(20)->get();
+        $posts = Post::where('lang', '=', $lang)->orderBy('created_at', 'desc')->take(20)->get();
 
         $feed->title = Config::get('app.blog_title');
         $feed->description = Config::get('app.blog_description');
@@ -151,13 +158,16 @@ class WelcomeController extends Controller
             $feed->addItem($post->title, $post->sub_title, 'URL', $post->created_at, $post->preview, $post->content);
         }
 
+        $this->statistics->incrementPage('rss_feed');
+
         return $feed->render('rss');
     }
 
     public function contact()
     {
-        Mail::send('emails.contact', ['name' => Input::get('name'), 'email' => Input::get('email'), 'message' => Input::get('message')], function($message)
-        {
+        $this->statistics->incrementPage('contact');
+
+        Mail::send('emails.contact', ['name' => Input::get('name'), 'email' => Input::get('email'), 'message' => Input::get('message')], function ($message) {
             $message->to(Config::get('app.email'), Config::get('app.name'))->subject('Contact from your blog - ' . Config::get('app.blog_title'));
         });
     }

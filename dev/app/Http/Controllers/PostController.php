@@ -2,8 +2,10 @@
 
 use App\Category;
 use App\Post;
+use App\Statistics;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Validation\Validator;
@@ -22,6 +24,7 @@ class PostController extends Controller
     |
     */
 
+
     /**
      * Create a new controller instance.
      *
@@ -39,6 +42,7 @@ class PostController extends Controller
      */
     public function index()
     {
+
 
         return view('home');
     }
@@ -195,5 +199,15 @@ class PostController extends Controller
         unlink($path);
 
         return Redirect::to('images');
+    }
+
+    public static function getStatistics()
+    {
+        $statistics = DB::table('statistics')
+            ->select('page', DB::raw('sum(times) as total'), DB::raw('count(addr) as unique_visitors'))
+            ->groupBy('page')
+            ->get();
+
+        return view('statistics')->with(array('statistics' => $statistics));
     }
 }

@@ -14,7 +14,9 @@
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
     <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 
-    <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
 </head>
 <body>
 
@@ -62,6 +64,7 @@
                             <li><a href="{{url('/auth/logout')}}">{{ trans('interface.logout') }}</a></li>
                             <li><a href="{{url('/home')}}">{{ trans('interface.admin') }}</a></li>
                             <li><a href="{{url('/images')}}">{{ trans('interface.gallery') }}</a></li>
+                            <li><a href="{{url('/statistics')}}">{{ trans('interface.statistics') }}</a></li>
                         @endif
                     </ul>
                 </div>
@@ -148,11 +151,12 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+    <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
     <script language="JavaScript" src="{{ URL::asset('/') }}js/index.js"></script>
+
+
 
     <script>
         // Replace the <textarea id="editor1"> with a CKEditor

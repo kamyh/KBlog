@@ -227,9 +227,9 @@
                         <div class="panel-body">
 
                             <section id="post" class="sec-post">
-                                    <div id="prev_content" class="prev-content">
+                                <div id="prev_content" class="prev-content">
 
-                                    </div>
+                                </div>
                             </section>
                         </div>
                     </div>
@@ -257,8 +257,7 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/publish/' . $post->id) }}">
-                                                <input type="hidden" name="_token"
-                                                       value="{{ csrf_token() }}">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit"
                                                         class="btn btn-default navbar-btn">@if($post->published) {{ trans('interface.unpublished') }} @else {{ trans('interface.published') }} @endif</button>
                                             </form>
@@ -268,10 +267,8 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/edit/'.$post->id) }}">
-                                                <input type="hidden" name="_token"
-                                                       value="{{ csrf_token() }}">
-                                                <button type="submit"
-                                                        class="btn btn-default navbar-btn">{{ trans('interface.edit') }}</button>
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button type="submit" class="btn btn-default navbar-btn">{{ trans('interface.edit') }}</button>
                                             </form>
 
                                             <form enctype="multipart/form-data"
@@ -279,15 +276,14 @@
                                                   method="POST"
                                                   accept-charset="utf-8"
                                                   action="{{ url('/post/delete/' . $post->id) }}">
-                                                <input type="hidden" name="_token"
-                                                       value="{{ csrf_token() }}">
-                                                <button type="submit"
-                                                        class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button type="submit" class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
                                             </form>
+
+
                                         </div>
                                     </div>
                                 </nav>
-
                             @endforeach
                         </div>
                     </div>
