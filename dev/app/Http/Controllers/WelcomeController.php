@@ -4,11 +4,13 @@ use App\Category;
 use App\Comment;
 use App\Post;
 use App\Feed;
+use App\RequestRegister;
 use App\Statistics;
 use App\SubComment;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 
@@ -170,5 +172,17 @@ class WelcomeController extends Controller
         Mail::send('emails.contact', ['name' => Input::get('name'), 'email' => Input::get('email'), 'message' => Input::get('message')], function ($message) {
             $message->to(Config::get('app.email'), Config::get('app.name'))->subject('Contact from your blog - ' . Config::get('app.blog_title'));
         });
+    }
+
+    public function register($token)
+    {
+        if(RequestRegister::isValid($token)) {
+            //$requestRegister = RequestRegister::where('token','=',$token)->first();
+
+            return view('register_from_email')->with(array());
+        }
+
+        return "ERROR";
+        return Redirect::to('/');
     }
 }

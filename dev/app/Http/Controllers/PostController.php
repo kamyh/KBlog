@@ -2,6 +2,7 @@
 
 use App\Category;
 use App\Post;
+use App\RequestRegister;
 use App\Statistics;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -201,7 +202,7 @@ class PostController extends Controller
         return Redirect::to('images');
     }
 
-    public static function getStatistics()
+    public function getStatistics()
     {
         $statistics = DB::table('statistics')
             ->select('page', DB::raw('sum(times) as total'), DB::raw('count(addr) as unique_visitors'))
@@ -209,5 +210,24 @@ class PostController extends Controller
             ->get();
 
         return view('statistics')->with(array('statistics' => $statistics));
+    }
+
+    public function invite(\Illuminate\Http\Request $request)
+    {
+        $validator = \Illuminate\Support\Facades\Validator::make($request->all(), [
+            'email' => 'required|email',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('home')
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $requestRegister = RequestRegister::generate();
+
+        $requestRegister->sendTo(Input::get('email'));
+
+        return Redirect::to('/home');
     }
 }

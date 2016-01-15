@@ -29,6 +29,8 @@ Route::group(['middleware' => 'language'], function () {
 
     Route::get('feed/{lang}', 'WelcomeController@feed')->where('lang', '[A-Za-z]+');
 
+    Route::get('register/{token}', 'WelcomeController@register');
+
 	Route::controllers(['auth' => 'Auth\AuthController', 'password' => 'Auth\PasswordController',]);
 
 	// Manage Language changement
@@ -52,6 +54,8 @@ Route::group(['middleware' => 'language'], function () {
         Route::get('/images', 'PostController@images');
         Route::post('/images', 'PostController@imagesUpload');
         Route::post('/images/delete', 'PostController@imagesDelete');
+
+        Route::post('/invite', 'PostController@invite');
 
         Route::get('/statistics', 'PostController@getStatistics');
     });

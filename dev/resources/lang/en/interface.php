@@ -67,4 +67,6 @@ return [
 	'addr' => 'Adresse',
 	'visit' => 'Visits',
 	'visit_unique' => 'Visits unique',
+	'invite' => 'Invite new blogger',
+	'invite_btn' => 'Invite',
 ];

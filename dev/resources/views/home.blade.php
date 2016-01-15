@@ -279,12 +279,38 @@
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit" class="btn btn-default navbar-btn">{{ trans('interface.delete') }}</button>
                                             </form>
-
-
                                         </div>
                                     </div>
                                 </nav>
                             @endforeach
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec-invite" class="sec-invite">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">{{ trans('interface.invite') }}</div>
+                        <div class="panel-body">
+                            <form enctype="multipart/form-data"
+                                  role="form"
+                                  method="POST"
+                                  accept-charset="utf-8"
+                                  action="{{ url('/invite') }}">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                                <div class="input-group">
+                                    <input type="text" class="form-control" name="email" placeholder="{{ trans('interface.email') }}">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">{{ trans('interface.invite_btn') }}</button>
+                                    </span>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
