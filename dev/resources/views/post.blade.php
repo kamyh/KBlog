@@ -15,6 +15,7 @@
             {!! $post->content !!}
 
             <a href="{{url('category/' . $post->getCategory()->name)}}" role="button"><span class="tag"><i class="fa fa-tag"></i> {{$post->getCategory()->name}}</span></a>
+            <span class="author">{{$post->getAuthor()}}</span>
         </div>
     </section>
 

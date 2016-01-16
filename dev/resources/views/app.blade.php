@@ -134,7 +134,7 @@
     <footer id="footer">
         <div class="container">
             <div class="subject">
-                Blog Subject
+                {{ Config::get('app.blog_description')}}
             </div>
             <ul class="soc-media-ul">
                 <li><a href="{{ Config::get('app.twitter')}}" class="fa fa-2x fa-twitter" target="_blank"></a></li>
@@ -146,8 +146,9 @@
             </ul>
 
         </div>
-        <a href="https://github.com/kamyh/KBlog"><span>KBlog - {{ Config::get('app.version')}}</span></a>
-        <a href="{{url('auth/login')}}"><span>{{ trans('interface.login') }}</span></a>
+        <a href="https://github.com/kamyh/KBlog"><span>KBlog.{{ Config::get('app.version')}}</span></a>
+        <a href="{{url('auth/login')}}"><span>- {{ trans('interface.login') }} -</span></a>
+        <span>{{\App\Post::publishedCount() . ' ' . trans('interface.posts')}}</span>
     </footer>
 
     <!-- Scripts -->

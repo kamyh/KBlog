@@ -196,6 +196,18 @@ hr {
     border-radius: 0 !important;
 }
 
+.author{
+    color:lightgrey;
+    font-weight: 700;
+}
+
+.extra-post-infos{
+    color: darkgrey;
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 /*Main*/
 .sec-main {
     position: relative;

@@ -45,7 +45,9 @@
                     <input type="submit" value="Read More" onclick="window.location='{{url('/post/' . $post->id) }}'">
                     <span>{{$post->published_at}}</span>
                 </div>
+
                 <a href="{{url('category/' . $post->getCategory()->name)}}" role="button"><span class="tag"><i class="fa fa-tag"></i> {{$post->getCategory()->name}}</span></a>
+                <span class="extra-post-infos">{{$post->getNumberOfComments()}} {{ trans('interface.comments') }} || </span>
             </div>
 
         </section>
