@@ -227,6 +227,10 @@ hr {
     text-align: center;
 }
 
+pre{
+    border-radius: 0 !important;
+}
+
 .main-heading {
     position: absolute;
     top: 0;

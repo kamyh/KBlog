@@ -14,6 +14,9 @@
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
     <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
 
+    <link href="{{asset('ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css')}}" rel="stylesheet">
+
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
@@ -156,12 +159,14 @@
 
     <script src="{{ asset('/ckeditor/ckeditor.js') }}"></script>
     <script language="JavaScript" src="{{ URL::asset('/') }}js/index.js"></script>
-
+    <script src="{{asset('ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js')}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
 
     <script>
-        // Replace the <textarea id="editor1"> with a CKEditor
-        // instance, using default configuration.
-        CKEDITOR.replace('editor-content');
+        CKEDITOR.replace('editor-content',{
+            extraPlugins: 'codesnippet',
+            codeSnippet_theme: 'monokai_sublime'
+        });
     </script>
 </div>
