@@ -46,7 +46,7 @@
             </div>
 
             <button type="submit"
-                    class="btn btn-default navbar-btn">{{ trans('interface.comment') }}</button>
+                    class="btn-clean">{{ trans('interface.comment') }}</button>
 
         </form>
     </div>
